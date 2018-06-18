@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Ma todolist</title>
-        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
         <style>
             a{text-decoration: none; color: black;}
             html{
@@ -30,7 +30,7 @@
               text-align: center;
               border-top-left-radius:     1em;
               border-top-right-radius:    1em;
-              font-family: 'Gloria Hallelujah', cursive;
+              font-family: 'Poiret One', cursive;
             }
             ul{
               padding: 0;
@@ -50,6 +50,27 @@
               margin-right: 1em;
               float: right;
             }
+            #newtodo{
+              border-style: none;
+              border-bottom-style: solid;
+              border-color: #EDEDEE;
+              font-family: 'Poiret One', cursive;
+              outline: 0;
+            }
+            #submit{
+              padding:6px 0 6px 0;
+            	font:bold 13px Arial;
+            	background:#f5f5f5;
+            	color:#555;
+            	border-radius:2px;
+            	width:100px;
+            	border:1px solid #ccc;
+              box-shadow:1px 1px #aaa;
+              outline: 0;
+            }
+            #submit:active{
+              background-color: #DCDAD7;
+            }
 
         </style>
     </head>
@@ -64,10 +85,8 @@
         </ul>
 
         <form action="/todo/ajouter/" method="post">
-            <p class="form">
-                <input type="text" name="newtodo" id="newtodo" autofocus />
-                <input type="submit" />
-            </p>
+          <input type="text" name="newtodo" id="newtodo" placeholder="Nouvelles tâches"/>
+          <input type="submit" id="submit" value="Valider" />
         </form>
     </body>
 </html>
