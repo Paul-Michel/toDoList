@@ -5,7 +5,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 var app = express();
 app.use(session({secret: 'isSecret'}))
-
+app.use(express.static('public'))
 .use(function(req, res, next){
     if (typeof(req.session.todolist) == 'undefined') {
         req.session.todolist = [];
